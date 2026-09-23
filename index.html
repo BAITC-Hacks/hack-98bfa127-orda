@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f6fa">
+  <title>ekt.kz — ИИ-ассистент</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="ekt.kz — главная"><span class="brand-mark">e</span><span>ekt<span class="brand-dot">.</span>kz</span></a>
+      <div class="topbar-note"><span class="status-dot"></span><span data-i18n="top_status">Онлайн · подбор оборудования</span></div>
+      <div class="language-switch" role="group" aria-label="Выбор языка">
+        <button type="button" data-lang="kk">KZ</button><button type="button" class="active" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button>
+      </div>
+    </header>
+
+    <section class="workspace" aria-label="Чат с ассистентом">
+      <aside class="intro-panel">
+        <div class="eyebrow"><span class="sparkle">✳</span><span data-i18n="eyebrow">УМНЫЙ ПОМОЩНИК EKT.KZ</span></div>
+        <h1 data-i18n="hero_title">Найдём нужное<br>для вашего проекта.</h1>
+        <p class="intro-copy" data-i18n="hero_copy">Подскажем по наличию, цене и сертификатам электротехнической продукции.</p>
+        <div class="feature-list">
+          <div class="feature"><span class="feature-icon">⌕</span><div><strong data-i18n="feature1_title">Быстрый поиск</strong><span data-i18n="feature1_copy">По артикулу или названию</span></div></div>
+          <div class="feature"><span class="feature-icon">▤</span><div><strong data-i18n="feature2_title">Актуальные данные</strong><span data-i18n="feature2_copy">Цены и остатки на складе</span></div></div>
+          <div class="feature"><span class="feature-icon">✓</span><div><strong data-i18n="feature3_title">Подтверждённое качество</strong><span data-i18n="feature3_copy">Номер сертификата в карточке</span></div></div>
+        </div>
+        <div class="aside-footer"><span class="mini-mark">e</span><span data-i18n="footer_note">Технологии, которым доверяют</span></div>
+      </aside>
+
+      <section class="chat-card">
+        <div class="chat-header">
+          <div class="assistant-avatar"><span>e</span><i></i></div>
+          <div class="assistant-info"><strong data-i18n="assistant_name">Ассистент ekt.kz</strong><span><i class="status-dot"></i><span data-i18n="online">На связи</span></span></div>
+          <button class="more-button" type="button" aria-label="Информация">•••</button>
+        </div>
+        <div class="chat-meta"><span data-i18n="today">СЕГОДНЯ</span><span class="secure"><span>⌑</span><span data-i18n="secure">Информация о товарах обновляется</span></span></div>
+        <div class="messages" id="messages" aria-live="polite" aria-label="Сообщения"></div>
+        <div class="quick-actions" id="quickActions" hidden>
+          <span class="quick-label" data-i18n="confirm_prompt">Добавить в корзину?</span>
+          <button class="quick-yes" id="yesBtn" type="button">Да, добавить</button>
+          <button class="quick-no" id="noBtn" type="button">Отмена</button>
+        </div>
+        <div class="suggestions" id="suggestions">
+          <span data-i18n="try_search">Попробуйте найти</span>
+          <button type="button" data-query="EKT-1001">EKT-1001</button>
+          <button type="button" data-query="кабель">Кабель</button>
+          <button type="button" data-query="IP44">IP44</button>
+        </div>
+        <form class="input-row" id="chatForm">
+          <label class="sr-only" for="userInput" data-i18n="input_label">Артикул или название товара</label>
+          <input type="text" id="userInput" autocomplete="off" placeholder="Введите артикул или название товара..." data-i18n-placeholder="placeholder">
+          <button id="sendBtn" type="submit"><span data-i18n="send">Отправить</span><span class="send-arrow">↑</span></button>
+        </form>
+        <div class="chat-footnote"><span>✧</span><span data-i18n="disclaimer">Ассистент помогает подобрать товары из каталога</span></div>
+      </section>
+    </section>
+    <footer class="page-footer"><span>© 2026 ekt.kz</span><span data-i18n="footer_right">Электротехника для профессионалов</span></footer>
+  </main>
+</body>
+</html>
+
